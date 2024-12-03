@@ -12,7 +12,7 @@ def lambda_handler(event, context):
         # Get the file name from the API path parameters
         file_name = event['queryStringParameters']['file_name']
 
-        s3_key = f'{file_name.split(".")[0]}-thumbnail.png'
+        s3_key = file_name.rsplit('.', 1)[0] + '-thumbnail' + file_name[file_name.rfind('.'):]
         s3_object = s3.get_object(Bucket=bucket_name, Key=s3_key)
         image_data = s3_object['Body'].read()
 
