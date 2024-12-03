@@ -1,7 +1,7 @@
 import requests
 import base64
 
-API_GATEWAY_URL = 'https://xb5r31iptc.execute-api.us-east-1.amazonaws.com/dev/upload'
+API_GATEWAY_URL = 'https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/upload'
 
 image_path = './test_resources/img.png'
 

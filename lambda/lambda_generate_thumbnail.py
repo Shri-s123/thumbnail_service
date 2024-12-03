@@ -18,7 +18,7 @@ def lambda_handler(event, context):
             image_data = s3_object['Body'].read()
 
             # thumbnail generation
-            thumbnail_key = f'{s3_key}-thumbnail.png'
+            thumbnail_key = s3_key.rsplit('.', 1)[0] + '-thumbnail' + s3_key[s3_key.rfind('.'): ]
 
             # Upload the same file with the new name
             s3.put_object(Bucket=bucket_name, Key=thumbnail_key, Body=image_data)

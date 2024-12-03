@@ -1,0 +1,842 @@
+2024-12-04 18:24:04,173 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:24:04,173 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:24:05,391 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:24:05,391 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:24:06,693 - INFO - Creating Lambda functions...
+2024-12-04 18:24:06,695 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:24:07,880 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:24:07,880 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:24:07,883 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:24:08,306 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:24:08,306 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:24:08,310 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:24:08,708 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:24:08,709 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:24:08,713 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:24:09,086 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:24:09,086 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:24:09,087 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:24:09,087 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:24:10,409 - INFO - API Gateway 'ImageUploadAPI' created with ID: jxiiauf87d
+2024-12-04 18:24:10,409 - INFO - Fetching root resources...
+2024-12-04 18:24:10,684 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:24:10,992 - INFO - Resource 'image-upload' created with ID: ntjhvp
+2024-12-04 18:24:11,274 - INFO - Method 'GET' created for resource 'image-upload'.
+2024-12-04 18:24:11,568 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:24:11,568 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:24:11,848 - INFO - Resource 'image-download' created with ID: jw8gd7
+2024-12-04 18:24:12,116 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:24:12,403 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:24:12,403 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:24:12,689 - INFO - Resource 'image-thumbnail-generate' created with ID: 73ttzu
+2024-12-04 18:24:12,972 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:24:13,239 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:24:13,240 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:24:13,526 - INFO - Resource 'image-thumbnail' created with ID: 83lkve
+2024-12-04 18:24:13,898 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:24:14,167 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:24:14,167 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:24:14,723 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:24:14,723 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:24:14,723 - INFO - GET https://jxiiauf87d.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:24:14,723 - INFO - GET https://jxiiauf87d.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:24:14,723 - INFO - GET https://jxiiauf87d.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:24:14,723 - INFO - GET https://jxiiauf87d.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:24:49,666 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:24:50,740 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:24:50,740 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:24:51,966 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:24:51,966 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:24:53,208 - INFO - Creating Lambda functions...
+2024-12-04 18:24:53,209 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:24:54,405 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:24:54,405 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:24:54,408 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:24:54,810 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:24:54,810 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:24:54,814 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:24:55,210 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:24:55,210 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:24:55,214 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:24:55,624 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:24:55,624 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:24:55,624 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:24:55,625 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:24:56,860 - INFO - API Gateway 'ImageUploadAPI' created with ID: t5jvf0dcg8
+2024-12-04 18:24:56,860 - INFO - Fetching root resources...
+2024-12-04 18:24:57,139 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:24:57,447 - INFO - Resource 'image-upload' created with ID: utodg0
+2024-12-04 18:24:57,739 - INFO - Method 'GET' created for resource 'image-upload'.
+2024-12-04 18:24:58,032 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:24:58,034 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:24:58,309 - INFO - Resource 'image-download' created with ID: emrs6s
+2024-12-04 18:24:58,572 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:24:58,845 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:24:58,845 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:24:59,123 - INFO - Resource 'image-thumbnail-generate' created with ID: 33e0jo
+2024-12-04 18:24:59,393 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:24:59,661 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:24:59,661 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:24:59,926 - INFO - Resource 'image-thumbnail' created with ID: pwug24
+2024-12-04 18:25:00,181 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:25:00,440 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:25:00,441 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:25:00,996 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:25:00,996 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:25:00,996 - INFO - GET https://t5jvf0dcg8.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:25:00,996 - INFO - GET https://t5jvf0dcg8.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:25:00,996 - INFO - GET https://t5jvf0dcg8.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:25:00,996 - INFO - GET https://t5jvf0dcg8.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:26:37,232 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 18:26:49,898 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 18:26:50,197 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 18:26:50,518 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 18:28:01,478 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:28:02,585 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:28:02,585 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:28:03,804 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:28:03,804 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:28:05,069 - INFO - Creating Lambda functions...
+2024-12-04 18:28:05,071 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:28:06,233 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:28:06,233 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:28:06,236 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:28:06,631 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:28:06,632 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:28:06,636 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:28:07,053 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:28:07,053 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:28:07,057 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:28:07,429 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:28:07,429 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:28:07,429 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:28:07,429 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:28:08,799 - INFO - API Gateway 'ImageUploadAPI' created with ID: xlkpygxzgc
+2024-12-04 18:28:08,799 - INFO - Fetching root resources...
+2024-12-04 18:28:09,073 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:28:09,376 - INFO - Resource 'image-upload' created with ID: 3bgo7k
+2024-12-04 18:28:09,655 - INFO - Method 'GET' created for resource 'image-upload'.
+2024-12-04 18:28:09,943 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:28:09,943 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:28:10,235 - INFO - Resource 'image-download' created with ID: ds0mgt
+2024-12-04 18:28:10,498 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:28:10,765 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:28:10,766 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:28:11,048 - INFO - Resource 'image-thumbnail-generate' created with ID: 1x1ysa
+2024-12-04 18:28:11,313 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:28:11,577 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:28:11,578 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:28:11,862 - INFO - Resource 'image-thumbnail' created with ID: 9gxnfv
+2024-12-04 18:28:12,129 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:28:12,410 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:28:12,410 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:28:12,956 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:28:12,956 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:28:12,956 - INFO - GET https://xlkpygxzgc.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:28:12,956 - INFO - GET https://xlkpygxzgc.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:28:12,956 - INFO - GET https://xlkpygxzgc.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:28:12,956 - INFO - GET https://xlkpygxzgc.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:28:13,963 - ERROR - Error granting permission to API Gateway for Lambda function 'image-upload': An error occurred (ResourceConflictException) when calling the AddPermission operation: The statement id (AllowAPIGatewayInvoke) provided already exists. Please provide a new statement id, or remove the existing statement.
+2024-12-04 18:28:13,964 - ERROR - Failed to add permissions to API Gateway. Exiting...
+2024-12-04 18:30:06,795 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:30:07,901 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:30:07,902 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:30:09,155 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:30:09,156 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:30:10,419 - INFO - Creating Lambda functions...
+2024-12-04 18:30:10,420 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:30:11,566 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:30:11,566 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:30:11,569 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:30:11,963 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:30:11,963 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:30:11,966 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:30:12,433 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:30:12,434 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:30:12,436 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:30:12,858 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:30:12,858 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:30:12,858 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:30:12,859 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:30:14,140 - INFO - API Gateway 'ImageUploadAPI' created with ID: a0cms07y96
+2024-12-04 18:30:14,140 - INFO - Fetching root resources...
+2024-12-04 18:30:14,412 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:30:14,706 - INFO - Resource 'image-upload' created with ID: v3dog9
+2024-12-04 18:30:14,986 - INFO - Method 'GET' created for resource 'image-upload'.
+2024-12-04 18:30:15,281 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:30:15,282 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:30:15,561 - INFO - Resource 'image-download' created with ID: u69dx0
+2024-12-04 18:30:15,846 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:30:16,106 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:30:16,106 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:30:16,388 - INFO - Resource 'image-thumbnail-generate' created with ID: nxlt82
+2024-12-04 18:30:16,664 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:30:16,941 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:30:16,942 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:30:17,224 - INFO - Resource 'image-thumbnail' created with ID: msiuwt
+2024-12-04 18:30:17,479 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:30:17,749 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:30:17,749 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:30:18,355 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:30:18,356 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:30:18,356 - INFO - GET https://a0cms07y96.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:30:18,356 - INFO - GET https://a0cms07y96.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:30:18,356 - INFO - GET https://a0cms07y96.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:30:18,356 - INFO - GET https://a0cms07y96.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:30:20,858 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 18:30:21,233 - ERROR - Error occurred: An error occurred (ResourceConflictException) when calling the CreateEventSourceMapping operation: An event source mapping with SQS arn (" arn:aws:sqs:us-east-1:125452764654:ImageThumbnailQueue ") and function (" image-upload ") already exists. Please update or delete the existing mapping with UUID 41493876-491a-4684-b535-f7d2b1909190
+Traceback (most recent call last):
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\scripts\utils.py", line 90, in add_sqs_trigger_to_lambda
+    response = lambda_client.create_event_source_mapping(
+        EventSourceArn=sqs_queue_arn,
+        FunctionName=lambda_function_name,
+        Enabled=True,
+    )
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.ResourceConflictException: An error occurred (ResourceConflictException) when calling the CreateEventSourceMapping operation: An event source mapping with SQS arn (" arn:aws:sqs:us-east-1:125452764654:ImageThumbnailQueue ") and function (" image-upload ") already exists. Please update or delete the existing mapping with UUID 41493876-491a-4684-b535-f7d2b1909190
+2024-12-04 18:30:21,238 - ERROR - Failed to add permissions to SQS queue. Exiting...
+2024-12-04 18:31:05,862 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:31:06,942 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:31:06,942 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:31:08,221 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:31:08,221 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:31:09,483 - INFO - Creating Lambda functions...
+2024-12-04 18:31:09,484 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:31:10,651 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:31:10,651 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:31:10,654 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:31:11,019 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:31:11,019 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:31:11,023 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:31:11,417 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:31:11,417 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:31:11,421 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:31:11,882 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:31:11,882 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:31:11,882 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:31:11,882 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:31:13,098 - INFO - API Gateway 'ImageUploadAPI' created with ID: thjjxtnaig
+2024-12-04 18:31:13,098 - INFO - Fetching root resources...
+2024-12-04 18:31:13,367 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:31:13,663 - INFO - Resource 'image-upload' created with ID: vkmfw7
+2024-12-04 18:31:13,940 - INFO - Method 'GET' created for resource 'image-upload'.
+2024-12-04 18:31:14,227 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:31:14,227 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:31:14,489 - INFO - Resource 'image-download' created with ID: 7sdq4n
+2024-12-04 18:31:14,743 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:31:14,997 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:31:14,998 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:31:15,260 - INFO - Resource 'image-thumbnail-generate' created with ID: teq6oj
+2024-12-04 18:31:15,523 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:31:15,783 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:31:15,783 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:31:16,059 - INFO - Resource 'image-thumbnail' created with ID: 04zfnk
+2024-12-04 18:31:16,314 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:31:16,582 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:31:16,582 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:31:17,222 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:31:17,223 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:31:17,223 - INFO - GET https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:31:17,223 - INFO - GET https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:31:17,223 - INFO - GET https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:31:17,224 - INFO - GET https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:31:25,917 - INFO - Setup complete.
+2024-12-04 18:31:25,917 - INFO - API URLs and their purposes:
+2024-12-04 18:31:25,917 - INFO - 1. Upload Image: https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 18:31:25,918 - INFO - 2. Download Image: https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 18:31:25,918 - INFO - 3. Download Thumbnail: https://thjjxtnaig.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 18:38:01,295 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:38:02,365 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:38:02,366 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:38:03,561 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:38:03,562 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:38:04,781 - INFO - Creating Lambda functions...
+2024-12-04 18:38:04,783 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:38:05,981 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:38:05,981 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:38:05,985 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:38:06,397 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:38:06,398 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:38:06,402 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:38:06,866 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:38:06,867 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:38:06,870 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:38:07,261 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:38:07,262 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:38:07,262 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:38:07,262 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:38:08,515 - INFO - API Gateway 'ImageUploadAPI' created with ID: zgxy5g1bj9
+2024-12-04 18:38:08,516 - INFO - Fetching root resources...
+2024-12-04 18:38:08,779 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:38:09,059 - INFO - Resource 'image-upload' created with ID: 889i3g
+2024-12-04 18:38:09,323 - INFO - Method 'GET' created for resource 'image-upload'.
+2024-12-04 18:38:09,592 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:38:09,593 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:38:09,880 - INFO - Resource 'image-download' created with ID: yupyjg
+2024-12-04 18:38:10,147 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:38:10,426 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:38:10,426 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:38:10,723 - INFO - Resource 'image-thumbnail-generate' created with ID: eusc91
+2024-12-04 18:38:10,976 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:38:11,252 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:38:11,253 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:38:11,529 - INFO - Resource 'image-thumbnail' created with ID: y38qzv
+2024-12-04 18:38:11,801 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:38:12,067 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:38:12,068 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:38:12,634 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:38:12,634 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:38:12,634 - INFO - GET https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:38:12,634 - INFO - GET https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:38:12,635 - INFO - GET https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:38:12,635 - INFO - GET https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:38:14,958 - INFO - Setup complete.
+2024-12-04 18:38:14,958 - INFO - API URLs and their purposes:
+2024-12-04 18:38:14,958 - INFO - 1. Upload Image: https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 18:38:14,959 - INFO - 2. Download Image: https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 18:38:14,959 - INFO - 3. Download Thumbnail: https://zgxy5g1bj9.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 18:39:07,292 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:39:08,374 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:39:08,374 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:39:09,628 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:39:09,628 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:39:10,875 - INFO - Creating Lambda functions...
+2024-12-04 18:39:10,877 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:39:11,994 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:39:11,994 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:39:11,997 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:39:12,368 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:39:12,368 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:39:12,371 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:39:12,769 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:39:12,769 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:39:12,774 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:39:13,134 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:39:13,134 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:39:13,135 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:39:13,135 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:39:14,453 - INFO - API Gateway 'ImageUploadAPI' created with ID: 6vpe78uwaf
+2024-12-04 18:39:14,453 - INFO - Fetching root resources...
+2024-12-04 18:39:14,727 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:39:54,187 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:39:55,244 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:39:55,244 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:39:56,460 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:39:56,461 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:39:57,683 - INFO - Creating Lambda functions...
+2024-12-04 18:39:57,685 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:39:58,821 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:39:58,822 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:39:58,825 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:39:59,246 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:39:59,246 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:39:59,248 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:39:59,633 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:39:59,633 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:39:59,637 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:40:00,002 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:40:00,003 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:40:00,003 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:40:00,003 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:40:01,308 - INFO - API Gateway 'ImageUploadAPI' created with ID: 1oymk5sk98
+2024-12-04 18:40:01,308 - INFO - Fetching root resources...
+2024-12-04 18:40:01,594 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:40:01,913 - INFO - Resource 'image-upload' created with ID: sr75y0
+2024-12-04 18:40:02,234 - INFO - Method 'POST' created for resource 'image-upload'.
+2024-12-04 18:40:02,546 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:40:02,546 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:40:02,827 - INFO - Resource 'image-download' created with ID: visjls
+2024-12-04 18:40:03,097 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:40:03,375 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:40:03,376 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:40:03,657 - INFO - Resource 'image-thumbnail-generate' created with ID: 35o60f
+2024-12-04 18:40:03,926 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:40:04,214 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:40:04,215 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:40:04,498 - INFO - Resource 'image-thumbnail' created with ID: xxvq0t
+2024-12-04 18:40:04,779 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:40:05,064 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:40:05,064 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:40:05,646 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:40:05,646 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:40:05,646 - INFO - GET https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:40:05,646 - INFO - GET https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:40:05,647 - INFO - GET https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:40:05,647 - INFO - GET https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:40:08,470 - INFO - Setup complete.
+2024-12-04 18:40:08,471 - INFO - API URLs and their purposes:
+2024-12-04 18:40:08,471 - INFO - 1. Upload Image: https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 18:40:08,471 - INFO - 2. Download Image: https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 18:40:08,471 - INFO - 3. Download Thumbnail: https://1oymk5sk98.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 18:48:11,414 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 18:48:12,469 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 18:48:12,470 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 18:48:13,674 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 18:48:13,675 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 18:48:14,888 - INFO - Creating Lambda functions...
+2024-12-04 18:48:14,889 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:48:16,249 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:48:16,250 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 18:48:16,250 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 18:48:16,255 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:48:16,840 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:48:16,841 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 18:48:16,841 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 18:48:16,844 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:48:17,381 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:48:17,382 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 18:48:17,383 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 18:48:17,387 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:48:17,954 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:48:17,954 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 18:48:17,954 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 18:48:17,954 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 18:48:17,954 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 18:48:19,198 - INFO - API Gateway 'ImageUploadAPI' created with ID: s0bi7n7kw8
+2024-12-04 18:48:19,198 - INFO - Fetching root resources...
+2024-12-04 18:48:19,462 - INFO - Creating resource and method for path: image-upload with Lambda function: lambda_upload
+2024-12-04 18:48:19,743 - INFO - Resource 'image-upload' created with ID: pcdalw
+2024-12-04 18:48:20,021 - INFO - Method 'POST' created for resource 'image-upload'.
+2024-12-04 18:48:20,299 - INFO - Lambda function 'lambda_upload' integrated with resource 'image-upload'.
+2024-12-04 18:48:20,299 - INFO - Creating resource and method for path: image-download with Lambda function: lambda_download_image
+2024-12-04 18:48:20,589 - INFO - Resource 'image-download' created with ID: 5zrznw
+2024-12-04 18:48:20,862 - INFO - Method 'GET' created for resource 'image-download'.
+2024-12-04 18:48:21,132 - INFO - Lambda function 'lambda_download_image' integrated with resource 'image-download'.
+2024-12-04 18:48:21,133 - INFO - Creating resource and method for path: image-thumbnail-generate with Lambda function: lambda_generate_thumbnail
+2024-12-04 18:48:21,405 - INFO - Resource 'image-thumbnail-generate' created with ID: uw5tc3
+2024-12-04 18:48:21,664 - INFO - Method 'GET' created for resource 'image-thumbnail-generate'.
+2024-12-04 18:48:21,937 - INFO - Lambda function 'lambda_generate_thumbnail' integrated with resource 'image-thumbnail-generate'.
+2024-12-04 18:48:21,937 - INFO - Creating resource and method for path: image-thumbnail with Lambda function: lambda_download_thumbnail
+2024-12-04 18:48:22,220 - INFO - Resource 'image-thumbnail' created with ID: 1udvbo
+2024-12-04 18:48:22,473 - INFO - Method 'GET' created for resource 'image-thumbnail'.
+2024-12-04 18:48:22,740 - INFO - Lambda function 'lambda_download_thumbnail' integrated with resource 'image-thumbnail'.
+2024-12-04 18:48:22,741 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 18:48:23,420 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 18:48:23,420 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 18:48:23,420 - INFO - GET https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/image-upload - lambda_upload
+2024-12-04 18:48:23,420 - INFO - GET https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/image-download - lambda_download_image
+2024-12-04 18:48:23,420 - INFO - GET https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail-generate - lambda_generate_thumbnail
+2024-12-04 18:48:23,420 - INFO - GET https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/image-thumbnail - lambda_download_thumbnail
+2024-12-04 18:48:24,481 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 18:48:24,796 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 18:48:25,113 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 18:48:25,415 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 18:48:25,745 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 18:48:26,090 - INFO - Setup complete.
+2024-12-04 18:48:26,090 - INFO - API URLs and their purposes:
+2024-12-04 18:48:26,090 - INFO - 1. Upload Image: https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 18:48:26,090 - INFO - 2. Download Image: https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 18:48:26,090 - INFO - 3. Download Thumbnail: https://s0bi7n7kw8.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 19:05:24,498 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 19:05:25,565 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 19:05:25,565 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 19:05:26,762 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 19:05:26,763 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 19:05:27,968 - INFO - Creating Lambda functions...
+2024-12-04 19:05:27,970 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:05:29,384 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:05:29,385 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:05:29,385 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:05:29,389 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:05:29,963 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:05:29,963 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:05:29,963 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:05:29,967 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:05:30,634 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:05:30,635 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:05:30,635 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:05:30,639 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:05:31,259 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:05:31,260 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:05:31,260 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:05:31,260 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 19:05:31,261 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 19:05:32,571 - INFO - API Gateway 'ImageUploadAPI' created with ID: jxp34q9lpa
+2024-12-04 19:05:32,571 - INFO - Fetching root resources...
+2024-12-04 19:05:32,838 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 19:05:33,121 - INFO - Resource 'upload' created with ID: afirjy
+2024-12-04 19:05:33,390 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 19:05:33,668 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 19:05:33,668 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 19:05:33,947 - INFO - Resource 'download' created with ID: ild898
+2024-12-04 19:05:34,225 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 19:05:34,500 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 19:05:34,500 - INFO - Creating resource and method for path: None with Lambda function: image-thumbnail-generate
+2024-12-04 19:05:34,500 - ERROR - Unexpected error occurred: Parameter validation failed:
+Invalid type for parameter pathPart, value: None, type: <class 'NoneType'>, valid types: <class 'str'>
+Traceback (most recent call last):
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\scripts\apigateway_operations.py", line 51, in create_api_gateway
+    resource_response = apigateway_client.create_resource(
+        restApiId=api_id,
+        parentId=root_resource_id,
+        pathPart=path_part
+    )
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 980, in _make_api_call
+    request_dict = self._convert_to_request_dict(
+        api_params=api_params,
+    ...<3 lines>...
+        headers=additional_headers,
+    )
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 1047, in _convert_to_request_dict
+    request_dict = self._serializer.serialize_to_request(
+        api_params, operation_model
+    )
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\validate.py", line 381, in serialize_to_request
+    raise ParamValidationError(report=report.generate_report())
+botocore.exceptions.ParamValidationError: Parameter validation failed:
+Invalid type for parameter pathPart, value: None, type: <class 'NoneType'>, valid types: <class 'str'>
+2024-12-04 19:05:34,505 - ERROR - Failed to create API Gateway. Exiting...
+2024-12-04 19:06:38,894 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 19:06:39,972 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 19:06:39,972 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 19:06:41,170 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 19:06:41,170 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 19:06:42,387 - INFO - Creating Lambda functions...
+2024-12-04 19:06:42,388 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:06:43,495 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:06:43,496 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:06:43,499 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:06:43,893 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:06:43,893 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:06:43,897 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:06:44,298 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:06:44,298 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:06:44,304 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:06:44,654 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:06:44,654 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:06:44,655 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 19:06:44,655 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 19:06:46,466 - INFO - API Gateway 'ImageUploadAPI' created with ID: dbc14a9v66
+2024-12-04 19:06:46,466 - INFO - Fetching root resources...
+2024-12-04 19:06:46,716 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 19:06:47,011 - INFO - Resource 'upload' created with ID: sjjcq4
+2024-12-04 19:06:47,281 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 19:06:47,574 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 19:06:47,574 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 19:06:47,854 - INFO - Resource 'download' created with ID: bcoc0o
+2024-12-04 19:06:48,130 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 19:06:48,406 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 19:06:48,407 - INFO - Creating resource and method for path: download-thumbnail with Lambda function: image-thumbnail
+2024-12-04 19:06:48,680 - INFO - Resource 'download-thumbnail' created with ID: vtgc4a
+2024-12-04 19:06:48,945 - INFO - Method 'GET' created for resource 'download-thumbnail'.
+2024-12-04 19:06:49,214 - INFO - Lambda function 'image-thumbnail' integrated with resource 'download-thumbnail'.
+2024-12-04 19:06:49,214 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 19:06:49,748 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 19:06:49,748 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 19:06:49,749 - ERROR - Unexpected error occurred: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\scripts\apigateway_operations.py", line 94, in create_api_gateway
+    for path_part, function_name in lambda_function_names:
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-12-04 19:06:49,753 - ERROR - Failed to create API Gateway. Exiting...
+2024-12-04 19:07:46,830 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 19:07:47,860 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 19:07:47,860 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 19:07:49,099 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 19:07:49,099 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 19:07:50,347 - INFO - Creating Lambda functions...
+2024-12-04 19:07:50,349 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:07:51,692 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:07:51,693 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:07:51,693 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:07:51,697 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:07:52,282 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:07:52,283 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:07:52,283 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:07:52,286 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:07:52,887 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:07:52,888 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:07:52,888 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:07:52,893 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:07:53,479 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:07:53,481 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:07:53,481 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:07:53,482 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 19:07:53,482 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 19:07:55,278 - INFO - API Gateway 'ImageUploadAPI' created with ID: goof2iry53
+2024-12-04 19:07:55,278 - INFO - Fetching root resources...
+2024-12-04 19:07:55,542 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 19:07:55,823 - INFO - Resource 'upload' created with ID: va30fe
+2024-12-04 19:07:56,084 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 19:07:56,362 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 19:07:56,362 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 19:07:56,638 - INFO - Resource 'download' created with ID: raqkco
+2024-12-04 19:07:56,922 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 19:07:57,208 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 19:07:57,208 - INFO - Creating resource and method for path: download-thumbnail with Lambda function: image-thumbnail
+2024-12-04 19:07:57,497 - INFO - Resource 'download-thumbnail' created with ID: xonluu
+2024-12-04 19:07:57,756 - INFO - Method 'GET' created for resource 'download-thumbnail'.
+2024-12-04 19:07:58,027 - INFO - Lambda function 'image-thumbnail' integrated with resource 'download-thumbnail'.
+2024-12-04 19:07:58,027 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 19:07:58,546 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 19:07:58,546 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 19:07:58,546 - INFO - POST https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/upload - image-upload
+2024-12-04 19:07:58,546 - INFO - GET https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/download - image-download
+2024-12-04 19:07:58,546 - INFO - GET https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/None - image-thumbnail-generate
+2024-12-04 19:07:58,546 - INFO - GET https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail - image-thumbnail
+2024-12-04 19:08:00,045 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 19:08:00,352 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 19:08:00,686 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 19:08:00,998 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 19:08:01,311 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 19:08:01,702 - INFO - Setup complete.
+2024-12-04 19:08:01,702 - INFO - API URLs and their purposes:
+2024-12-04 19:08:01,703 - INFO - 1. Upload Image: https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 19:08:01,703 - INFO - 2. Download Image: https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 19:08:01,703 - INFO - 3. Download Thumbnail: https://goof2iry53.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 19:49:39,453 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 19:49:40,523 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 19:49:40,523 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 19:49:41,730 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 19:49:41,730 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 19:49:42,963 - INFO - Creating Lambda functions...
+2024-12-04 19:49:42,965 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:49:44,373 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:49:44,374 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:49:44,374 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:49:44,378 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:49:44,964 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:49:44,964 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:49:44,965 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:49:44,968 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:49:45,556 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:49:45,557 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:49:45,558 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:49:45,562 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:49:46,103 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:49:46,104 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:49:46,104 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:49:46,104 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 19:49:46,104 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 19:49:47,333 - INFO - API Gateway 'ImageUploadAPI' created with ID: 8fq6ufplh7
+2024-12-04 19:49:47,333 - INFO - Fetching root resources...
+2024-12-04 19:49:47,587 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 19:49:47,864 - INFO - Resource 'upload' created with ID: q8xchq
+2024-12-04 19:49:48,140 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 19:49:48,413 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 19:49:48,413 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 19:49:48,696 - INFO - Resource 'download' created with ID: qq9td4
+2024-12-04 19:49:48,967 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 19:49:49,261 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 19:49:49,261 - INFO - Creating resource and method for path: download-thumbnail with Lambda function: image-thumbnail
+2024-12-04 19:49:49,532 - INFO - Resource 'download-thumbnail' created with ID: wfvi18
+2024-12-04 19:49:49,803 - INFO - Method 'GET' created for resource 'download-thumbnail'.
+2024-12-04 19:49:50,066 - INFO - Lambda function 'image-thumbnail' integrated with resource 'download-thumbnail'.
+2024-12-04 19:49:50,067 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 19:49:50,613 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 19:49:50,614 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 19:49:50,614 - INFO - POST https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/upload - image-upload
+2024-12-04 19:49:50,614 - INFO - GET https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/download - image-download
+2024-12-04 19:49:50,614 - INFO - GET https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/None - image-thumbnail-generate
+2024-12-04 19:49:50,614 - INFO - GET https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail - image-thumbnail
+2024-12-04 19:49:51,636 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 19:49:51,963 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 19:49:52,265 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 19:49:52,579 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 19:49:52,900 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 19:49:53,236 - INFO - Setup complete.
+2024-12-04 19:49:53,237 - INFO - API URLs and their purposes:
+2024-12-04 19:49:53,237 - INFO - 1. Upload Image: https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 19:49:53,237 - INFO - 2. Download Image: https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 19:49:53,237 - INFO - 3. Download Thumbnail: https://8fq6ufplh7.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 19:51:12,315 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 19:51:13,366 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 19:51:13,367 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 19:51:14,622 - ERROR - Error creating SQS queue 'ImageThumbnailQueue': An error occurred (AWS.SimpleQueueService.QueueDeletedRecently) when calling the CreateQueue operation: You must wait 60 seconds after deleting a queue before you can create another with the same name.
+Traceback (most recent call last):
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\scripts\sqs_operations.py", line 23, in create_sqs_queue
+    response = sqs_client.create_queue(QueueName=queue_name)
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.QueueDeletedRecently: An error occurred (AWS.SimpleQueueService.QueueDeletedRecently) when calling the CreateQueue operation: You must wait 60 seconds after deleting a queue before you can create another with the same name.
+2024-12-04 19:51:14,624 - ERROR - Failed to create SQS queue. Exiting...
+2024-12-04 19:53:00,160 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 19:53:01,226 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 19:53:01,226 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 19:53:02,483 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 19:53:02,483 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 19:53:03,696 - INFO - Creating Lambda functions...
+2024-12-04 19:53:03,698 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:53:04,980 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:53:04,981 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 19:53:04,981 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 19:53:04,983 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:53:05,595 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:53:05,596 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 19:53:05,597 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 19:53:05,600 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:53:06,169 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:53:06,170 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 19:53:06,170 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 19:53:06,175 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:53:06,849 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:53:06,850 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 19:53:06,850 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 19:53:06,850 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 19:53:06,850 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 19:53:08,121 - INFO - API Gateway 'ImageUploadAPI' created with ID: rf5gbvvq3b
+2024-12-04 19:53:08,122 - INFO - Fetching root resources...
+2024-12-04 19:53:08,378 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 19:53:08,649 - INFO - Resource 'upload' created with ID: iiebe3
+2024-12-04 19:53:08,913 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 19:53:09,181 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 19:53:09,181 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 19:53:09,445 - INFO - Resource 'download' created with ID: bzaere
+2024-12-04 19:53:09,710 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 19:53:09,980 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 19:53:09,980 - INFO - Creating resource and method for path: download-thumbnail with Lambda function: image-thumbnail
+2024-12-04 19:53:10,267 - INFO - Resource 'download-thumbnail' created with ID: 5lvin2
+2024-12-04 19:53:10,531 - INFO - Method 'GET' created for resource 'download-thumbnail'.
+2024-12-04 19:53:10,841 - INFO - Lambda function 'image-thumbnail' integrated with resource 'download-thumbnail'.
+2024-12-04 19:53:10,842 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 19:53:11,361 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 19:53:11,361 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 19:53:11,361 - INFO - POST https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/upload - image-upload
+2024-12-04 19:53:11,361 - INFO - GET https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/download - image-download
+2024-12-04 19:53:11,361 - INFO - GET https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/None - image-thumbnail-generate
+2024-12-04 19:53:11,361 - INFO - GET https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail - image-thumbnail
+2024-12-04 19:53:12,404 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 19:53:12,692 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 19:53:12,993 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 19:53:13,317 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 19:53:13,623 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 19:53:14,002 - INFO - Setup complete.
+2024-12-04 19:53:14,002 - INFO - API URLs and their purposes:
+2024-12-04 19:53:14,003 - INFO - 1. Upload Image: https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 19:53:14,003 - INFO - 2. Download Image: https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 19:53:14,003 - INFO - 3. Download Thumbnail: https://rf5gbvvq3b.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 21:03:14,480 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 21:03:15,570 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 21:03:15,571 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 21:03:16,828 - ERROR - Error creating SQS queue 'ImageThumbnailQueue': An error occurred (AWS.SimpleQueueService.QueueDeletedRecently) when calling the CreateQueue operation: You must wait 60 seconds after deleting a queue before you can create another with the same name.
+Traceback (most recent call last):
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\scripts\sqs_operations.py", line 23, in create_sqs_queue
+    response = sqs_client.create_queue(QueueName=queue_name)
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shris\PycharmProjects\thumbail_service\.venv\Lib\site-packages\botocore\client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.QueueDeletedRecently: An error occurred (AWS.SimpleQueueService.QueueDeletedRecently) when calling the CreateQueue operation: You must wait 60 seconds after deleting a queue before you can create another with the same name.
+2024-12-04 21:03:16,831 - ERROR - Failed to create SQS queue. Exiting...
+2024-12-04 21:03:54,787 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 21:03:55,822 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 21:03:55,822 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 21:03:57,087 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 21:03:57,087 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 21:03:58,321 - INFO - Creating Lambda functions...
+2024-12-04 21:03:58,322 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 21:03:59,609 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 21:03:59,609 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 21:03:59,610 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 21:03:59,614 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 21:04:00,199 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 21:04:00,199 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 21:04:00,199 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 21:04:00,201 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 21:04:00,744 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 21:04:00,744 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 21:04:00,744 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 21:04:00,748 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 21:04:01,281 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 21:04:01,282 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 21:04:01,282 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 21:04:01,282 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 21:04:01,282 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 21:04:02,542 - INFO - API Gateway 'ImageUploadAPI' created with ID: cslameeo9c
+2024-12-04 21:04:02,542 - INFO - Fetching root resources...
+2024-12-04 21:04:02,801 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 21:04:03,081 - INFO - Resource 'upload' created with ID: jowd0a
+2024-12-04 21:04:03,344 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 21:04:03,617 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 21:04:03,618 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 21:04:03,893 - INFO - Resource 'download' created with ID: j9r42y
+2024-12-04 21:04:04,167 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 21:04:04,456 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 21:04:04,456 - INFO - Creating resource and method for path: download-thumbnail with Lambda function: image-thumbnail
+2024-12-04 21:04:04,739 - INFO - Resource 'download-thumbnail' created with ID: kka3di
+2024-12-04 21:04:04,992 - INFO - Method 'GET' created for resource 'download-thumbnail'.
+2024-12-04 21:04:05,263 - INFO - Lambda function 'image-thumbnail' integrated with resource 'download-thumbnail'.
+2024-12-04 21:04:05,263 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 21:04:05,834 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 21:04:05,834 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 21:04:05,834 - INFO - POST https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/upload - image-upload
+2024-12-04 21:04:05,834 - INFO - GET https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/download - image-download
+2024-12-04 21:04:05,834 - INFO - GET https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/None - image-thumbnail-generate
+2024-12-04 21:04:05,834 - INFO - GET https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail - image-thumbnail
+2024-12-04 21:04:06,858 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 21:04:07,164 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 21:04:07,471 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 21:04:07,789 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 21:04:08,094 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 21:04:08,494 - INFO - Setup complete.
+2024-12-04 21:04:08,495 - INFO - API URLs and their purposes:
+2024-12-04 21:04:08,495 - INFO - 1. Upload Image: https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 21:04:08,495 - INFO - 2. Download Image: https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 21:04:08,495 - INFO - 3. Download Thumbnail: https://cslameeo9c.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
+2024-12-04 21:13:17,252 - INFO - Creating S3 bucket: image-thumbnail-bucket-shri...
+2024-12-04 21:13:18,305 - INFO - S3 bucket 'image-thumbnail-bucket-shri' created successfully.
+2024-12-04 21:13:18,305 - INFO - Creating SQS queue: ImageThumbnailQueue...
+2024-12-04 21:13:19,569 - INFO - SQS queue 'ImageThumbnailQueue' created successfully.
+2024-12-04 21:13:19,569 - INFO - Creating IAM role: MyLambdaExecutionRole...
+2024-12-04 21:13:20,806 - INFO - Creating Lambda functions...
+2024-12-04 21:13:20,808 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 21:13:22,239 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 21:13:22,240 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_upload.zip'.
+2024-12-04 21:13:22,240 - INFO - Lambda function 'image-upload' created successfully.
+2024-12-04 21:13:22,244 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 21:13:22,825 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 21:13:22,826 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_image.zip'.
+2024-12-04 21:13:22,827 - INFO - Lambda function 'image-download' created successfully.
+2024-12-04 21:13:22,831 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 21:13:23,479 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 21:13:23,480 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_generate_thumbnail.zip'.
+2024-12-04 21:13:23,480 - INFO - Lambda function 'image-thumbnail-generate' created successfully.
+2024-12-04 21:13:23,483 - INFO - Packaged Lambda function code into 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 21:13:24,056 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 21:13:24,058 - INFO - Deleted temporary zip file 'C:\Users\Shris\PycharmProjects\thumbail_service\lambda\lambda_download_thumbnail.zip'.
+2024-12-04 21:13:24,058 - INFO - Lambda function 'image-thumbnail' created successfully.
+2024-12-04 21:13:24,058 - INFO - Creating API Gateway: ImageUploadAPI...
+2024-12-04 21:13:24,058 - INFO - Creating API Gateway 'ImageUploadAPI'...
+2024-12-04 21:13:25,340 - INFO - API Gateway 'ImageUploadAPI' created with ID: 53a1m0nwui
+2024-12-04 21:13:25,340 - INFO - Fetching root resources...
+2024-12-04 21:13:25,596 - INFO - Creating resource and method for path: upload with Lambda function: image-upload
+2024-12-04 21:13:25,885 - INFO - Resource 'upload' created with ID: 2ggoab
+2024-12-04 21:13:26,154 - INFO - Method 'POST' created for resource 'upload'.
+2024-12-04 21:13:26,449 - INFO - Lambda function 'image-upload' integrated with resource 'upload'.
+2024-12-04 21:13:26,449 - INFO - Creating resource and method for path: download with Lambda function: image-download
+2024-12-04 21:13:26,742 - INFO - Resource 'download' created with ID: jxszpu
+2024-12-04 21:13:27,006 - INFO - Method 'GET' created for resource 'download'.
+2024-12-04 21:13:27,310 - INFO - Lambda function 'image-download' integrated with resource 'download'.
+2024-12-04 21:13:27,311 - INFO - Creating resource and method for path: download-thumbnail with Lambda function: image-thumbnail
+2024-12-04 21:13:27,606 - INFO - Resource 'download-thumbnail' created with ID: xjnh64
+2024-12-04 21:13:27,940 - INFO - Method 'GET' created for resource 'download-thumbnail'.
+2024-12-04 21:13:28,223 - INFO - Lambda function 'image-thumbnail' integrated with resource 'download-thumbnail'.
+2024-12-04 21:13:28,223 - INFO - Deploying API Gateway to stage 'dev'...
+2024-12-04 21:13:28,764 - INFO - API Gateway deployed successfully to stage 'dev'.
+2024-12-04 21:13:28,764 - INFO - API URLs and their associated Lambda functions:
+2024-12-04 21:13:28,764 - INFO - POST https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/upload - image-upload
+2024-12-04 21:13:28,764 - INFO - GET https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/download - image-download
+2024-12-04 21:13:28,764 - INFO - GET https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/None - image-thumbnail-generate
+2024-12-04 21:13:28,764 - INFO - GET https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail - image-thumbnail
+2024-12-04 21:13:29,814 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-upload'.
+2024-12-04 21:13:30,238 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-download'.
+2024-12-04 21:13:30,538 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail-generate'.
+2024-12-04 21:13:30,849 - INFO - Permission granted to API Gateway to invoke Lambda function 'image-thumbnail'.
+2024-12-04 21:13:31,156 - INFO - Permission granted to Lambda 'image-upload' to send messages to SQS.
+2024-12-04 21:13:31,539 - INFO - Setup complete.
+2024-12-04 21:13:31,539 - INFO - API URLs and their purposes:
+2024-12-04 21:13:31,539 - INFO - 1. Upload Image: https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/upload (POST) - Uploads an image to S3
+2024-12-04 21:13:31,539 - INFO - 2. Download Image: https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/download/{file_name} (GET) - Downloads an image from S3
+2024-12-04 21:13:31,539 - INFO - 3. Download Thumbnail: https://53a1m0nwui.execute-api.us-east-1.amazonaws.com/dev/download-thumbnail/{file_name} (GET) - Downloads a thumbnail of an image
